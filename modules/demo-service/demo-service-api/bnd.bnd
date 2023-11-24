@@ -1,0 +1,10 @@
+Bundle-Name: demo-service-api
+Bundle-SymbolicName: com.adj.demo.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.adj.demo.exception,\
+	com.adj.demo.model,\
+	com.adj.demo.service,\
+	com.adj.demo.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../demo-service-service/service.xml

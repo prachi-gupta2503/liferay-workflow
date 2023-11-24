@@ -1,0 +1,4 @@
+Bundle-Name: recruitment-process
+Bundle-SymbolicName: com.adj.recruitment
+Bundle-Version: 1.0.0
+Export-Package: com.adj.recruitment.constants
