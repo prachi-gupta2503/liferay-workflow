@@ -1,0 +1,4 @@
+Bundle-Name: project-mamagement-web
+Bundle-SymbolicName: com.adj.project.management
+Bundle-Version: 1.0.0
+Export-Package: com.adj.project.management.constants

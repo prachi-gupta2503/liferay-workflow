@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.adj.project.management">
+	<namespace>PM</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Project" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="projectId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+         <column name="status" type="int" />
+ 		<column name="statusByUserId" type="long" />
+ 		<column name="statusByUserName" type="String" />
+ 		<column name="statusDate" type="Date" />
+ 		
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="workflowId" type="long" />
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="projectId" />
+		</order>
+
+		<!-- Finder methods -->
+
+      <finder name="status" return-type="Collection">
+ 			<finder-column name="groupId"></finder-column>
+ 			<finder-column name="status"></finder-column>
+ 	  </finder>
+ 		
+		<finder name="Name" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	
+	<entity local-service="true" name="Product" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="productId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+         <column name="status" type="int" />
+ 		<column name="statusByUserId" type="long" />
+ 		<column name="statusByUserName" type="String" />
+ 		<column name="statusDate" type="Date" />
+ 		
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="workflowId" type="long" />
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="productId" />
+		</order>
+
+		<!-- Finder methods -->
+
+      <finder name="status" return-type="Collection">
+ 			<finder-column name="groupId"></finder-column>
+ 			<finder-column name="status"></finder-column>
+ 	  </finder>
+ 		
+		<finder name="Name" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+</service-builder>

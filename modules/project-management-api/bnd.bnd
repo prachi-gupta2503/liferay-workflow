@@ -1,0 +1,10 @@
+Bundle-Name: project-management-api
+Bundle-SymbolicName: com.adj.project.management.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.adj.project.management.exception,\
+	com.adj.project.management.model,\
+	com.adj.project.management.service,\
+	com.adj.project.management.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../project-management-service/service.xml
